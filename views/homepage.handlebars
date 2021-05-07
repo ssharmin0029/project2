@@ -1,0 +1,34 @@
+<section>
+    <form>
+        <label for="exampleFormControlInput1" class="form-label">Search bar</label>
+        <input type='input' class='form-control' placeholder='Search by name/boro/zip'>
+    </form>
+
+    {{#each house of |houses|}}
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                <img src="..." alt="...">
+                </div>
+
+                <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title house-name">{{house.houseNumber}} {{house.streetName}} {{house.boro}}, {{house.zip}}</h5>
+                    <p class="card-text house-desc">{{house.desc}}</p>
+                    <p class="card-text house-vio">
+                        <small>
+                            {{#if house.violationStatus === 'OPEN'}}
+                            Violation: {{house.currentStatus}} {{house.violationStatus}}
+                            {{else}}
+                            Violation: {{house.violationStatus}}
+                            {{/if}}
+                        </small>
+                    </p>
+                </div>
+                </div>
+            </div>
+        </div>     
+    {{/each}}
+</section>
+
+<script src='/js/homeScripts'></script>
