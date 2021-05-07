@@ -10,7 +10,7 @@ Create profiles for Users
 
 There will be a search checkbox filter to search for homes based on any closed / open violations / boro / etc...
 
-Create back-end API for users and profiles.
+Create back-end API for users and houses.
 
 ## GIT COMMITS/PUSH
 
@@ -33,6 +33,8 @@ git branch -d [branchname]
 
 ## Extra Functionality
 
-CREATE DELETE function for removing houses/properties on account
 
 CREATE homeowners selling/buying page
+
+API can get info on lot size/ bd/ br
+
