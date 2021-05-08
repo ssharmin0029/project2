@@ -1,0 +1,41 @@
+[
+    {
+        "violationID": "10000197",
+        "buildingID": "74898",
+        "registrationID": "205177",
+        "violationStatus": "Open",
+        "novDescription": "SECTION 27-2005 ADM CODE REPLACE WITH NEW THE MISSING HANDRAIL AT EAST AND WEST SECTION AT NORTH AND SOUTH WALL AT PUBLIC HALL, 1st STORY",
+        "approvedDate": "2013-10-12T00:00:00.000",
+        "streetName:": "ECHO PLACE",
+        "streetCode": "29920",
+        "houseNumber": "231",
+        "boro": "BRONX",
+        " zip": "10457"
+    },
+    {
+        "violationID": "10001330",
+        "buildingID": "334172",
+        "registrationID": "359194",
+        "violationStatus": "Close",
+        "novDescription": "SECTION 27-2005 ADM CODE PROPERLY REPAIR THE BROKEN OR DEFECTIVE ELECTRIC OUTLET ON EAST WALL IN THE 2nd ROOM FROM EAST AT NORTH LOCATED AT APT 2R, 2nd STORY, APARTMENT AT EAST",
+        "approvedDate": "2013-10-11T00:00:00.000",
+        "streetName:": "MC DONALD AVENUE",
+        "streetCode": "59430",
+        "houseNumber": "505",
+        "boro": "BROOKLYN",
+        " zip": "11218"
+    },
+    {
+        "violationID": "10001379",
+        "buildingID": "558734",
+        "registrationID": "922899",
+        "violationStatus": "Close",
+        "novDescription": "SECTION 27-2037, 2038 HMC: PROVIDE A SAFE AND ADEQUATE SUPPLY OF ELECTRIC SERVICE TO THE FIXTURES , AT CELLAR",
+        "approvedDate": "2013-10-10T00:00:00.000",
+        "streetName:": "148 STREET",
+        "streetCode": "23140",
+        "houseNumber": "116-21",
+        "boro": "QUEENS",
+        " zip": "11436"
+    }
+]
