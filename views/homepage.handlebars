@@ -1,7 +1,8 @@
 <section>
-    <form>
+    <form class='search-form'>
         <label for="exampleFormControlInput1" class="form-label">Search bar</label>
-        <input type='input' class='form-control' placeholder='Search by name/boro/zip'>
+        <input type='input' class='form-control' placeholder='Search by address/zip' id='#searchBar'>
+        <button id='searchBtn'>Search</button>
     </form>
 
     {{#each house of |houses|}}
