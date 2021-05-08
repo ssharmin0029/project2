@@ -1,14 +1,14 @@
 const User = require('./User');
-const Profile = require('./Profile')
+const House = require('./House')
 
 
-User.hasOne(Profile, {
-    foreignKey: 'id',
+User.hasMany(House, {
+    foreignKey: 'user_id',
     onDelete: 'CASCADE'
 });
 
-Profile.belongsTo(User, {
-    foreignKey: 'id'
+House.belongsTo(User, {
+    foreignKey: 'user_id'
 });
 
-module.exports = { User, Profile }
+module.exports = {User, House}
