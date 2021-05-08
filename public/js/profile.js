@@ -5,6 +5,7 @@ const deleteHouse = async (e) => {
     
         const response = await fetch (`/api/houses/${id}`, {
             method: 'DELETE',
+            
         });
 
         if (response.ok) {

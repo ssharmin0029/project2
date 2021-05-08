@@ -1,7 +1,7 @@
 const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
-const routes = require('./controllers');
+const routes = require('./controller');
 const path = require('path');
 
 require('dotenv').config();
