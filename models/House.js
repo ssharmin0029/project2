@@ -1,7 +1,7 @@
 const { Model, DataTypes, STRING } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Houses extends Model {}
+class House extends Model {}
 
 Houses.init(
   {
@@ -68,8 +68,8 @@ Houses.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'project',
+    modelName: 'House',
   }
 );
 
-module.exports = Project;
+module.exports = House;
