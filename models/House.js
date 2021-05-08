@@ -1,9 +1,9 @@
-const { Model, DataTypes, STRING } = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class House extends Model {}
 
-Houses.init(
+House.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -68,7 +68,7 @@ Houses.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'House',
+    modelName: 'house',
   }
 );
 

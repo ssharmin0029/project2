@@ -5,7 +5,7 @@ const search = async (e) => {
     const searchBar = document.querySelector('#searchBar').value.trim() //10010
     let searchQuery;
 
-    if (searchBar.includes( (RegExp('[0-9]')) ).length === 5) {
+    if (searchBar.includes( (RegExp('[0-9]')) ) && searchBar.length === 5) {
         searchQuery = 'zip'
         const response = await fetch(`https://data.cityofnewyork.us/resource/wvxf-dwi5.json?${searchQuery}=${searchBar}`, {
             method: 'GET',
