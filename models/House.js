@@ -11,39 +11,47 @@ House.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    violationID: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    buildingID: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    registrationID: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    violationStatus: {
+    nta: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    novDescription: {
+    violationid: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    buildingid: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    registrationid: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    violationstatus: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    approvedDate: {
+    novdescription: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    approveddate: {
       type: DataTypes.DATE,
       allowNull: false,
     },
-    streetName: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    streetCode: {
+    communityboard: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    houseNumber: {
+    housenumber: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    streetname: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    streetcode: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
@@ -54,6 +62,11 @@ House.init(
     zip: {
       type: DataTypes.INTEGER,
       allowNull: false,
+    },
+    date_created: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
     },
     user_id: {
       type: DataTypes.INTEGER,
