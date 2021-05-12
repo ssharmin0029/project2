@@ -1,22 +1,104 @@
 const { User, House } = require('../models');
 const router = require('express').Router();
 const axios = require('axios');
+const url = 'https://data.cityofnewyork.us/resource/wvxf-dwi5.json'
 
-router.get('/', async (req, res) => {
+
+router.get('/',  (req, res) => {
     try {
-        // const houseData = await axios.get({thirdpartyapiroute})
-        
-        const houseData = await House.findAll({})
+        const house = []
+        // const houseData =  axios.get(url)
+        axios.get(url)
+            .then((data) => {
+                for (i=0; i < 10; i++) {
+                    house.push(data.data[i])
+                }
+                // console.log(data)
+                // console.log(typeof data)
+                
+                res.render('homepage', {
+                    house,
+                    logged_in: req.session.logged_in
+                }
+                )
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+            
 
-        const houses = houseData.map( ( house ) => house.get( {plain:true} ) )
+     
+        // console.log(houseData[0])
+        // const houseData = await House.findAll({})
 
-        res.render('homepage', {
-            houses,
-            logged_in: req.session.logged_in
-        })
+        // const houses = houseData.map( ( house ) => house.get({plain: true}))
+        // console.log(house)
+      
     } catch (err) {
+
         res.status(500).json(err)
     }
 });
+
+router.get('/zip/:zip' , async (req, res) => {
+    try {
+        const zip = req.params.zip
+        const houseData = await axios.get(`https://data.cityofnewyork.us/resource/wvxf-dwi5.json?zip=${zip}`)
+        const house = [];
+        if(!houseData) {
+            res.status(400).json({message: 'there is no houses with that zipcode'})
+        }
+
+        for (i=0; i<10; i++) {
+            house.push(houseData.data[i])
+        }
+
+    
+        res.render('zip', {
+            house,
+            logged_in: req.session.logged_in
+        });
+
+    } catch (err) {
+        res.status(500).json(err)
+    }
+})
+
+router.get('/search/:address' , async (req, res) => {
+
+    try {
+        let address = req.params.address
+        // let addressJoin = []
+        address = address.split(' ')
+        // let address2 = address
+        // addressJoin.push(address2.split(' ').join('').toUpperCase())
+        // addresJoin.push(address)
+        console.log(address)
+        // console.log(addressJoin)
+
+        const houseData = await axios.get(`https://data.cityofnewyork.us/resource/wvxf-dwi5.json?where=housenumber ${address[0]}`) //fix fetching url
+        
+        console.log(houseData)
+        const house = [];
+
+        if(!houseData) {
+            res.status(400).json({message: 'there is no houses with that address'});
+        }
+
+        
+        house.push(houseData.data)
+        
+        // console.log(house)
+
+        res.render('zip', {
+            house,
+            logged_in: req.session.logged_in
+        });
+
+    } catch (err) {
+        res.status(500).json(err)
+    }
+})
+
 
 module.exports = router;

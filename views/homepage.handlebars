@@ -1,27 +1,27 @@
 <section>
     <form class='search-form'>
         <label for="exampleFormControlInput1" class="form-label">Search bar</label>
-        <input type='input' class='form-control' placeholder='Search by address/zip' id='#searchBar'>
+        <input type='input' class='form-control' placeholder='Search by address/zip' id='searchBar'>
         <button id='searchBtn'>Search</button>
     </form>
 
-    {{#each house of |houses|}}
+    {{#each house as |houseData|}}
         <div class="card mb-3" style="max-width: 540px;">
             <div class="row g-0">
                 <div class="col-md-4">
-                <img src="..." alt="...">
+                <img src="" alt="...">
                 </div>
 
                 <div class="col-md-8">
                 <div class="card-body">
-                    <h5 class="card-title house-name">{{house.houseNumber}} {{house.streetName}} {{house.boro}}, {{house.zip}}</h5>
-                    <p class="card-text house-desc">{{house.desc}}</p>
+                    <h5 class="card-title house-name">{{housenumber}} {{streetname}} {{boro}}, {{zip}}</h5>
+                    <p class="card-text house-desc">hello</p>
                     <p class="card-text house-vio">
                         <small>
-                            {{#if house.violationStatus === 'OPEN'}}
-                            Violation: {{house.currentStatus}} {{house.violationStatus}}
+                            {{#if violationstatus}}
+                            Violation: {{violationstatus}}
                             {{else}}
-                            Violation: {{house.violationStatus}}
+                            Violation: {{violationstatus}}
                             {{/if}}
                         </small>
                     </p>
@@ -32,4 +32,4 @@
     {{/each}}
 </section>
 
-<script src='/js/homeScripts'></script>
+<script src='/js/homeScripts.js'></script>
