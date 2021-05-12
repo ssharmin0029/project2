@@ -1,40 +1,40 @@
+// const axios = require('axios')
+
 const search = async (e) => {
 
     e.preventDefault()
 
     const searchBar = document.querySelector('#searchBar').value.trim() //10010
-    let searchQuery;
+    
 
-    if (searchBar.includes( (RegExp('[0-9]')) ) && searchBar.length === 5) {
-        searchQuery = 'zip'
-        const response = await fetch(`https://data.cityofnewyork.us/resource/wvxf-dwi5.json?${searchQuery}=${searchBar}`, {
-            method: 'GET',
-            headers: { 'Content-Type': 'application/json'}
-        });
+    if (searchBar.match( /[0-9]/g ) && searchBar.length === 5) {
+        const response = await fetch(`/zip/${searchBar}`, {
+            method: 'GET'
+        })
 
-        if ( response.ok ) {
-            console.log(response);
-            //return something
+        if (response.ok) {
+            document.location.replace(`/zip/${searchBar}`)
         } else {
-            alert( response.statusText )
+            document.location.replace('/404')
+        }
+    } else if (searchBar) {
+        
+        const response = await fetch(`/search/${searchBar}`, {
+            method: 'GET'
+        })
+
+        if (response.ok) {
+            document.location.replace(`/search/${searchBar}`)
+        } else {
+            // document.location.replace('/404')
+            console.log('failed')
         }
 
     } else {
 
-        const response = await fetch(`https://data.cityofnewyork.us/resource/wvxf-dwi5.json?$q=${searchBar}`, {
-            method: 'GET',
-            headers: { 'Content-Type': 'application/json'}
-        });
-
-        if( response.ok ) {
-            console.log(response);
-            // return something
-        } else {
-           alert( response.statusText )
-        }
+        alert('please enter an address')
     }
-    
-
-
+ 
 }
 
+document.querySelector('.search-form').addEventListener('submit', search)
