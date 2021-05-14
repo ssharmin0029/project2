@@ -5,17 +5,18 @@ const login = async (e) => {
     const password = document.querySelector('#password-login').value.trim();
 
     if (email && password) {
+        debugger
         const response = await fetch('/api/users/login', {
             method: 'POST',
             body: JSON.stringify({email, password}),
             headers: { 'Content-Type': 'application/json' }
-        })
+        });
 
         if (response.ok) {
-            document.location.replace('/')
+            document.location.replace('/profile')
             console.log('logged in');
         } else {
-            console.log('log in failed');
+            console.log(response.statusText);
         }
     }
 }
@@ -35,7 +36,7 @@ const signup = async (e) => {
         });
 
         if (response.ok) {
-            document.location.replace('/')
+            document.location.replace('/profile')
             console.log('logged in')
         } else {
             console.log('log in failed')
@@ -43,8 +44,8 @@ const signup = async (e) => {
     }
 }
 
-document.querySelector('.submit')
+document.querySelector('.login-form')
     .addEventListener('submit', login);
     
-document.querySelector('.signup')
+document.querySelector('.signup-form')
     .addEventListener('submit', signup)
