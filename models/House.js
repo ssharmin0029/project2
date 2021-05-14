@@ -32,7 +32,7 @@ House.init(
       allowNull: false,
     },
     novdescription: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
     },
     approveddate: {
