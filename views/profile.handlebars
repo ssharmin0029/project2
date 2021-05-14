@@ -4,5 +4,22 @@
   </div>
 </div>
 
+  {{#if houses.length}}
+  <div class="col-md-6 house-list">
+    <h3>List of Houses:</h3>
+
+    {{#each houses as |house|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/house/{{house.id}}">{{housenumber}} {{streetname}} {{boro}}, {{zip}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{house.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>
 
 <script src="./js/profile.js"></script>
