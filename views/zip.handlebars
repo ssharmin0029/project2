@@ -8,8 +8,10 @@
 
                 <div class="col-md-8">
                 <div class="card-body">
-                    <h5 class="card-title house-name" id='{{this.violationid}}'>{{this.housenumber}} {{this.streetname}} {{this.boro}}, {{this.zip}}</h5>
-                    <p class="card-text house-desc"></p>
+                    <h5 class="card-title house-name">{{this.housenumber}} {{this.streetname}} {{this.boro}}, {{this.zip}}</h5>
+
+                    <p id='{{this.violationid}}' style='display: none;'>{{housenumber}} {{streetname}} {{boro}} {{zip}} {{nta}} {{violationid}} {{buildingid}} {{registrationid}} {{violationstatus}} {{approveddate}} {{communityboard}} {{streetcode}}</p>
+
                     <p class="card-text house-vio">
                         <small>
                             {{#if this.violationstatus}}

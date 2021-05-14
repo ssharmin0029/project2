@@ -8,6 +8,8 @@
 </head>
 
 <body>
+    <header>
+        <a href='/'><h1>Housing Data</h1></a>
     {{#if logged_in}}
         <nav>
             <button class='no-button' id='logout'>logout</button>
@@ -18,6 +20,7 @@
             <a href='/login'>login</a>
         </nav>
     {{/if}}
+    </header>
     <main>
         {{{body}}}
     </main>
