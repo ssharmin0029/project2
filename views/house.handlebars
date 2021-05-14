@@ -19,6 +19,10 @@
   <p>Street Code: {{streetcode}}</p>
   <p>Borough: {{boro}}</p>
   <p>Zip Code: {{zip}}</p>
+
+  <p id='{{this.violationid}}' style='display: none;'>{{housenumber}}|{{streetname}}|{{boro}}|{{zip}}|{{nta}}|{{violationid}}|{{buildingid}}|{{registrationid}}|{{violationstatus}}|{{approveddate}}|{{communityboard}}|{{streetcode}}|{{novdescription}}</p>
 </div>
 {{/each}}
-
+{{#if logged_in}}
+<script src='/js/save.js'></script>
+{{/if}}
