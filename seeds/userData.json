@@ -1,16 +1,19 @@
 [
     {
-        "name": "John",
+        "fname": "John",
+        "lname": "Mayer",
         "email": "john@gmail.com",
         "password": "passwrod12345"
     },
     {
         "name": "Kyle",
+        "lname": "Kuzma",
         "email": "kyle@gmail.com",
         "password": "passwrod12345"
     },
     {
         "name": "Natasha",
+        "lname": "Lyonne",
         "email": "natasha@gmail.com",
         "password": "passwrod12345"
     }
