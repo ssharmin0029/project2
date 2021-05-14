@@ -1,3 +1,4 @@
+{{#each house}}
 <div class="text-center">
   {{!-- <h2>{{name}}</h2> --}}
   {{!-- <p>{{{get_emoji}}}</p> --}}
@@ -18,6 +19,6 @@
   <p>Street Code: {{streetcode}}</p>
   <p>Borough: {{boro}}</p>
   <p>Zip Code: {{zip}}</p>
-  <p>Created by {{user.name}} on {{date_created}}</p>
 </div>
+{{/each}}
 

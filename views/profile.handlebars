@@ -8,13 +8,17 @@
   <div class="col-md-6 house-list">
     <h3>List of Houses:</h3>
 
-    {{#each house as |house|}}
+    {{#each houses}}
     <div class="row mb-2">
       <div class="col-md-8">
-        <h4><a href="/house/{{house.id}}">{{housenumber}} {{streetname}} {{boro}}, {{zip}}</a></h4>
+        <h4><a href="/search/{{this.housenumber}} {{this.streetname}} {{this.boro}}, {{this.zip}}">{{this.housenumber}} {{this.streetname}} {{this.boro}}, {{this.zip}}</a></h4>
+        <p class='font-size-sm'>Violation Status: {{this.violationstatus}}</p>
+        
+        <p class='font-size-sm'>Violation Description: {{this.novdescription}}</p>
+        
       </div>
       <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{house.id}}">DELETE</button>
+        <button class="btn btn-sm btn-danger" data-id="{{this.id}}" onClick='deleteHouse({{this.id}})'>DELETE</button>
       </div>
     </div>
     {{/each}}
@@ -22,4 +26,4 @@
   {{/if}}
 </div>
 
-<script src="./js/profile.js"></script>
+<script src="/js/profile.js"></script>
