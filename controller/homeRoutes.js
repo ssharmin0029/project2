@@ -69,14 +69,16 @@ router.get('/search/:address' , async (req, res) => {
     try {
         let address = req.params.address
         // let addressJoin = []
-        address = address.split(' ')
+        address = address.toUpperCase().split(' ')
         // let address2 = address
         // addressJoin.push(address2.split(' ').join('').toUpperCase())
         // addresJoin.push(address)
         console.log(address)
         // console.log(addressJoin)
 
+
         const houseData = await axios.get(`https://data.cityofnewyork.us/resource/wvxf-dwi5.json?housenumber=${address[0]}&streetname=${address[1]} ${address[2]}`)
+
         
         // console.log(houseData)
         const house = [];
@@ -86,9 +88,9 @@ router.get('/search/:address' , async (req, res) => {
         }
 
         
-        house.push(houseData.data)
-        
-        // console.log(house)
+        house.push(houseData.data[0])
+       
+        console.log(house)
 
         res.render('house', {
             house,
