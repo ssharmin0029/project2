@@ -17,18 +17,6 @@ const deleteHouse = async (e) => {
 
 }
 
-const redirect = async (e) => {
-    e.preventDefault();
-    if (e.target.hasAttribute('data-id')) {
-        const id = e.target.getAttribute('data-id')
-
-        document.location.replace(`/houses/${id}`)
-    }
-}
 
 document.querySelector('#delete')
     .addEventListener('submit', deleteHouse);
-
-document.querySelector('#house-list')
-    .querySelectorAll('.building')
-    .addEventListener('click', redirect);

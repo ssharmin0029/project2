@@ -31,10 +31,10 @@ House.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    novdescription: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
+    // novdescription: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    // },
     approveddate: {
       type: DataTypes.DATE,
       allowNull: false,
@@ -63,11 +63,6 @@ House.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    date_created: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
-    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -78,7 +73,7 @@ House.init(
   },
   {
     sequelize,
-    timestamps: false,
+    timestamps: true,
     freezeTableName: true,
     underscored: true,
     modelName: 'house',
