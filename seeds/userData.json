@@ -6,13 +6,13 @@
         "password": "passwrod12345"
     },
     {
-        "name": "Kyle",
+        "fname": "Kyle",
         "lname": "Kuzma",
         "email": "kyle@gmail.com",
         "password": "passwrod12345"
     },
     {
-        "name": "Natasha",
+        "fname": "Natasha",
         "lname": "Lyonne",
         "email": "natasha@gmail.com",
         "password": "passwrod12345"
