@@ -53,7 +53,7 @@ router.get('/zip/:zip' , async (req, res) => {
             house.push(houseData.data[i])
         }
 
-    
+        console.log(house)
         res.render('zip', {
             house,
             logged_in: req.session.logged_in
@@ -76,7 +76,9 @@ router.get('/search/:address' , async (req, res) => {
         console.log(address)
         // console.log(addressJoin)
 
-        const houseData = await axios.get(`https://data.cityofnewyork.us/resource/wvxf-dwi5.json?housenumber=${address[0]}&streetname=${address[1]} ${address[2]}`); //fix fetching url
+
+        const houseData = await axios.get(`https://data.cityofnewyork.us/resource/wvxf-dwi5.json?housenumber=${address[0]}&streetname=${address[1]} ${address[2]}`)
+
         
         // console.log(houseData)
         const house = [];
@@ -90,7 +92,7 @@ router.get('/search/:address' , async (req, res) => {
        
         console.log(house)
 
-        res.render('zip', {
+        res.render('house', {
             house,
             logged_in: req.session.logged_in
         });
@@ -98,6 +100,13 @@ router.get('/search/:address' , async (req, res) => {
     } catch (err) {
         res.status(500).json(err)
     }
+})
+
+router.get('/login', async (req, res) => {
+    if (req.session.logged_in) {
+        res.redirect('/')
+    }
+    res.render('login');
 })
 
 
