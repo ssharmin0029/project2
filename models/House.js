@@ -31,10 +31,10 @@ House.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    // novdescription: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    // },
+    novdescription: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     approveddate: {
       type: DataTypes.DATE,
       allowNull: false,
