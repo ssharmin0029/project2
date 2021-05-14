@@ -28,6 +28,7 @@
     "express-session": "^1.17.1",
     "handlebars-paginate": "^0.1.0",
     "mysql2": "^2.2.5",
-    "sequelize": "^6.6.2"
+    "sequelize": "^6.6.2",
+    "watch": "^1.0.2"
   }
 }
