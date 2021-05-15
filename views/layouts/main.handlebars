@@ -1,34 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Property Violation: HousingApp</title>
-     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NYC Property Violations: HousingApp</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+        <div class="container-sm container-md">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="/">Housing Data</a>
+                    <form class="justify-content-start">
+                        {{#if logged_in}}
+                            <a role="button" class="btn btn-primary" href='/profile'>Profile</a>
+                            <button type="button" class="btn btn-secondary" id='logout'>Logout</button>
+                        {{else}}
+                            <a crole="button" class="btn btn-success" href='/login'>Login</a>
+                        {{/if}}
+                    </form>
+                </div>
+            </nav>
 
-<body>
-    <header>
-        <a href='/'><h1>Housing Data</h1></a>
-    {{#if logged_in}}
-        <nav>
-            <button class='no-button' id='logout'>logout</button>
-            <a href='/profile'>profile</a>
-        </nav>
-    {{else}}
-        <nav>
-            <a href='/login'>login</a>
-        </nav>
-    {{/if}}
-    </header>
-    <main>
-        {{{body}}}
-    </main>
+            <main class="container container-fluid mt-5">
+                {{{body}}}
+            </main>
 
-    {{#if logged_in}}
-    <script src='/js/logout.js'></script>
-    {{/if}}
-</body>
+            {{#if logged_in}}
+                <script src='/js/logout.js'></script>
+            {{/if}}
+        </div>
+    </body>
 </html>
+
+
+  {{!-- ---------------------------------------------------------------------------- --}}
+  {{!-- PREVIOUS VERSION --}}
+  {{!-- ---------------------------------------------------------------------------- --}}
+
+
+{{!-- <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NYC Property Violations: HousingApp</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+        <header class="display-flex justify-space-between align-center p-2">
+            <a href='/'><h1>Housing Data</h1></a>
+        {{#if logged_in}}
+            <nav>
+                <button class='no-button' id='logout'>logout</button>
+                <a href='/profile'>profile</a>
+            </nav>
+        {{else}}
+            <nav>
+                <a href='/login'>login</a>
+            </nav>
+        {{/if}}
+        </header>
+        <main class="container container-fluid mt-5">
+            {{{body}}}
+        </main>
+    </div>
+
+        {{#if logged_in}}
+        <script src='/js/logout.js'></script>
+        {{/if}}
+    </body>
+</html> --}}
+
+

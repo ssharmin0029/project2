@@ -1,28 +1,26 @@
 {{#each house}}
-<div class="text-center">
-  {{!-- <h2>{{name}}</h2> --}}
-  {{!-- <p>{{{get_emoji}}}</p> --}}
-  {{!-- <p>
-    <span for="img" aria-label="money">💲</span>
-  </p> --}}
-  <h2>-----------------------------------------------</h2>
-  <p>Neighborhood Tabulation Areas: {{nta}}</p>
-  <p>Violation ID: {{violationid}}</p>
-  <p>Building ID: {{buildingid}}</p>
-  <p> Registration ID: {{registrationid}}</p>
-  <p>Violation Status: {{violationstatus}}</p>
-  <p>Violation Description: {{novdescription}}</p>
-  <p>Violation Approved Date: {{approveddate}}</p>
-  <p>Community Board: {{communityboard}}</p>
-   <p>House Number: {{housenumber}}</p>
-  <p>Street Name: {{streetname}}</p>
-  <p>Street Code: {{streetcode}}</p>
-  <p>Borough: {{boro}}</p>
-  <p>Zip Code: {{zip}}</p>
+
+  <h3 class="text-center my-0 my-sm-4">Property Details</h3>
+  <div class="card mx-auto col px-md-5 text-left mb-3" style="max-width: 50rem;">
+    <p class="h5">Neighborhood Tabulation Areas: <span class="text-success">{{nta}}</span></p>
+    <p class="h5">Violation ID: <span class="text-success">{{violationid}}</span></p>
+    <p class="h5">Building ID: <span class="text-success">{{buildingid}}</span></p>
+    <p class="h5"> Registration ID: <span class="text-success">{{registrationid}}</span></p>
+    <p class="h5">Violation Status: <span class="text-success">{{violationstatus}}</span></p>
+    <p class="h5">Violation Description: <span class="text-success">{{novdescription}}</span></p>
+    <p class="h5">Violation Approved Date: <span class="text-success">{{approveddate}}</span></p>
+    <p class="h5">Community Board: <span class="text-success">{{communityboard}}</span></p>
+    <p class="h5">House Number: <span class="text-success">{{housenumber}}</span></p>
+    <p class="h5">Street Name: <span class="text-success">{{streetname}}</span></p>
+    <p class="h5">Street Code: <span class="text-success">{{streetcode}}</span></p>
+    <p class="h5">Borough: <span class="text-success">{{boro}}</span></p>
+    <p class="h5">Zip Code: <span class="text-success">{{zip}}</span></p>
+
   <button class='saveBtn' data-id='save' onClick='save({{this.violationid}})'>Save</button>
 
-  <p id='{{this.violationid}}' style='display: none;'>{{housenumber}}|{{streetname}}|{{boro}}|{{zip}}|{{nta}}|{{violationid}}|{{buildingid}}|{{registrationid}}|{{violationstatus}}|{{approveddate}}|{{communityboard}}|{{streetcode}}|{{novdescription}}</p>
-</div>
+
+    <p id='{{this.violationid}}' style='display: none;'>{{housenumber}}|{{streetname}}|{{boro}}|{{zip}}|{{nta}}|{{violationid}}|{{buildingid}}|{{registrationid}}|{{violationstatus}}|{{approveddate}}|{{communityboard}}|{{streetcode}}|{{novdescription}}</p>
+  </div>
 {{/each}}
 {{#if logged_in}}
 <script src='/js/save.js'></script>

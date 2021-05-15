@@ -1,27 +1,20 @@
-<div class="row">
-  <div class="col-auto">
-    <h2>Welcome, {{fname}} {{lname}}!</h2>
-  </div>
-</div>
-
+<div>
   {{#if houses.length}}
-  <div class="col-md-6 house-list">
-    <h3>List of Houses:</h3>
-
-    {{#each houses}}
+    <div class="col-md-6 house-list">
+      <h2 class="my-2 my-lg-4 text-dark" style="text-decoration: underline;">{{fname}}'s House List</h2>
+  {{#each houses}}
     <div class="row mb-2">
       <div class="col-md-8">
         <h4><a href="/search/{{this.housenumber}} {{this.streetname}} {{this.boro}}, {{this.zip}}">{{this.housenumber}} {{this.streetname}} {{this.boro}}, {{this.zip}}</a></h4>
-        <p class='font-size-sm'>Violation Status: {{this.violationstatus}}</p>
-        
-        <p class='font-size-sm'>Violation Description: {{this.novdescription}}</p>
-        
+        <p class="h6">Violation Status: <span class="text-success">{{this.violationstatus}}</span></p>
+        <p class="font-size-sm h6">Violation Description: <span class="text-secondary">{{this.novdescription}}</span></p>
+        <span>-------------------~***~-------------------</span>
       </div>
       <div class="col-md-4">
         <button class="btn btn-sm btn-danger" data-id="{{this.id}}" onClick='deleteHouse({{this.id}})'>DELETE</button>
       </div>
     </div>
-    {{/each}}
+  {{/each}}
   </div>
   {{/if}}
 </div>
