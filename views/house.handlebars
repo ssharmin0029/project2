@@ -1,4 +1,5 @@
 {{#each house}}
+
   <h3 class="text-center my-0 my-sm-4">Property Details</h3>
   <div class="card mx-auto col px-md-5 text-left mb-3" style="max-width: 50rem;">
     <p class="h5">Neighborhood Tabulation Areas: <span class="text-success">{{nta}}</span></p>
@@ -14,6 +15,9 @@
     <p class="h5">Street Code: <span class="text-success">{{streetcode}}</span></p>
     <p class="h5">Borough: <span class="text-success">{{boro}}</span></p>
     <p class="h5">Zip Code: <span class="text-success">{{zip}}</span></p>
+
+  <button class='saveBtn' data-id='save' onClick='save({{this.violationid}})'>Save</button>
+
 
     <p id='{{this.violationid}}' style='display: none;'>{{housenumber}}|{{streetname}}|{{boro}}|{{zip}}|{{nta}}|{{violationid}}|{{buildingid}}|{{registrationid}}|{{violationstatus}}|{{approveddate}}|{{communityboard}}|{{streetcode}}|{{novdescription}}</p>
   </div>
