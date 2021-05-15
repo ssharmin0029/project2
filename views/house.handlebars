@@ -19,6 +19,7 @@
   <p>Street Code: {{streetcode}}</p>
   <p>Borough: {{boro}}</p>
   <p>Zip Code: {{zip}}</p>
+  <button class='saveBtn' data-id='save' onClick='save({{this.violationid}})'>Save</button>
 
   <p id='{{this.violationid}}' style='display: none;'>{{housenumber}}|{{streetname}}|{{boro}}|{{zip}}|{{nta}}|{{violationid}}|{{buildingid}}|{{registrationid}}|{{violationstatus}}|{{approveddate}}|{{communityboard}}|{{streetcode}}|{{novdescription}}</p>
 </div>
