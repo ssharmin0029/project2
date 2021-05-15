@@ -1,29 +1,24 @@
 <section>
     {{#each house}}
-        <div class="card mb-3 house-card" style="max-width: 540px;">
+        <div class="card text-center mb-3 house-card" style="max-width: 25rem;">
             <div class="row g-0">
-                <div class="col-md-4">
-                <img src="" alt="...">
-                </div>
-
-                <div class="col-md-8">
-                <div class="card-body">
-                    <h5 class="card-title house-name">{{this.housenumber}} {{this.streetname}} {{this.boro}}, {{this.zip}}</h5>
-
-                    <p id='{{this.violationid}}' style='display: none;'>{{housenumber}}|{{streetname}}|{{boro}}|{{zip}}|{{nta}}|{{violationid}}|{{buildingid}}|{{registrationid}}|{{violationstatus}}|{{approveddate}}|{{communityboard}}|{{streetcode}}|{{novdescription}}</p>
-
-                    <p class="card-text house-vio">
-                        <small>
-                            {{#if this.violationstatus}}
-                            Violation: {{this.violationstatus}}
-                            {{else}}
-                            Violation: {{this.violationstatus}}
-                            {{/if}}
-                        </small>
-                    </p>
-
-                    <button class='saveBtn' data-id='save' onClick='save({{this.violationid}})'>Save</button>
-                </div>
+                <div class="col-12 col-md-12">
+                    <div class="card-body">
+                        <h5 class="card-title house-name">{{this.housenumber}} {{this.streetname}} {{this.boro}}, {{this.zip}}</h5>
+                        <p id='{{this.violationid}}' style='display: none;'>{{housenumber}}|{{streetname}}|{{boro}}|{{zip}}|{{nta}}|{{violationid}}|{{buildingid}}|{{registrationid}}|{{violationstatus}}|{{approveddate}}|{{communityboard}}|{{streetcode}}|{{novdescription}}</p>
+                        <p class="card-text house-vio">
+                            <h5>
+                                <small class="text-muted">
+                                    {{#if this.violationstatus}}
+                                    Violation: {{this.violationstatus}}
+                                    {{else}}
+                                    Violation: {{this.violationstatus}}
+                                    {{/if}}
+                                </small>
+                            </h5>
+                        </p>
+                        <button type="button" class="btn btn-sm btn-outline-primary saveBtn" data-id="save" onClick='save({{this.violationid}})'>Save</button>
+                    </div>
                 </div>
             </div>
         </div>     

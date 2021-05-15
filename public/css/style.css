@@ -18,7 +18,7 @@
    */
 
    /* ------------------------------------------------- */
-*,
+/* *,
 *::before,
 *::after {
   box-sizing: border-box;
@@ -103,10 +103,10 @@ h1 {
   a:hover {
     color: #065b83;
     text-decoration: underline;
-  }
+  } */
 
   /* ------------------------------------ */
-  form {
+  /* form {
     width: 100%;
   }
   
@@ -171,4 +171,4 @@ h1 {
   
   .container.container-fluid {
     width: 92%;
-  }
+  } */
