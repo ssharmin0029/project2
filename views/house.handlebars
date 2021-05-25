@@ -2,23 +2,25 @@
 
   <h3 class="text-center my-0 my-sm-4">Property Details</h3>
   <div class="card mx-auto col px-md-5 text-left mb-3" style="max-width: 50rem;">
-    <p class="h5">Neighborhood Tabulation Areas: <span class="text-success">{{nta}}</span></p>
-    <p class="h5">Violation ID: <span class="text-success">{{violationid}}</span></p>
-    <p class="h5">Building ID: <span class="text-success">{{buildingid}}</span></p>
-    <p class="h5"> Registration ID: <span class="text-success">{{registrationid}}</span></p>
-    <p class="h5">Violation Status: <span class="text-success">{{violationstatus}}</span></p>
-    <p class="h5">Violation Description: <span class="text-success">{{novdescription}}</span></p>
-    <p class="h5">Violation Approved Date: <span class="text-success">{{approveddate}}</span></p>
-    <p class="h5">Community Board: <span class="text-success">{{communityboard}}</span></p>
-    <p class="h5">House Number: <span class="text-success">{{housenumber}}</span></p>
-    <p class="h5">Street Name: <span class="text-success">{{streetname}}</span></p>
-    <p class="h5">Street Code: <span class="text-success">{{streetcode}}</span></p>
-    <p class="h5">Borough: <span class="text-success">{{boro}}</span></p>
-    <p class="h5">Zip Code: <span class="text-success">{{zip}}</span></p>
-
-  <button class='saveBtn' data-id='save' onClick='save({{this.violationid}})'>Save</button>
-
-
+    <p class="h5">Neighborhood Tabulation Areas: <span class="property-info">{{nta}}</span></p>
+    <p class="h5">Violation ID: <span class="property-info">{{violationid}}</span></p>
+    <p class="h5">Building ID: <span class="property-info">{{buildingid}}</span></p>
+    <p class="h5"> Registration ID: <span class="property-info">{{registrationid}}</span></p>
+    <p class="h5">Violation Status: <span class="property-info">{{violationstatus}}</span></p>
+    <p class="h5">Violation Description: <span class="property-info">{{novdescription}}</span></p>
+    <p class="h5">Violation Approved Date: <span class="property-info">{{approveddate}}</span></p>
+    <p class="h5">Community Board: <span class="property-info">{{communityboard}}</span></p>
+    <p class="h5">House Number: <span class="property-info">{{housenumber}}</span></p>
+    <p class="h5">Street Name: <span class="property-info">{{streetname}}</span></p>
+    <p class="h5">Street Code: <span class="property-info">{{streetcode}}</span></p>
+    <p class="h5">Borough: <span class="property-info">{{boro}}</span></p>
+    <p class="h5">Zip Code: <span class="property-info">{{zip}}</span></p>
+    
+    <div class="d-flex justify-content-center">
+      <div class="col-md-2">
+        <button class="btn btn-sm btn-primary saveBtn" type="button" data-id='save' onClick='save({{this.violationid}})'>Save</button>
+      </div>
+    </div>
     <p id='{{this.violationid}}' style='display: none;'>{{housenumber}}|{{streetname}}|{{boro}}|{{zip}}|{{nta}}|{{violationid}}|{{buildingid}}|{{registrationid}}|{{violationstatus}}|{{approveddate}}|{{communityboard}}|{{streetcode}}|{{novdescription}}</p>
   </div>
 {{/each}}

@@ -1,0 +1,21 @@
+
+#homepage {
+  color: #007bff;
+}
+
+#login-signup-form h2 {
+  text-align: center;
+}
+
+#login-signup-form input {
+  width: 25rem;
+  height: 2.5rem;
+}
+
+#login-signup-form .form-group {
+  text-align: center;
+}
+
+.property-info {
+  color: darkslategrey;
+}
