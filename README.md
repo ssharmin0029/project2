@@ -8,7 +8,8 @@
 - [Demo-Screenshots of the App](#Demo-Screenshots-of-the-App)
 - [Deployed Application URL](#Deployed-Application-URL)
 - [Description](#Description)
-- [Installations & Usage](#Installations-&-Usage)
+- [Installation](#Installation)
+- [Usage](#Usage)
 - [Navigating the Repository](#Navigating-the-Repository)
 - [Technologies Used](#Technologies-Used)
 
@@ -37,14 +38,14 @@ I WANT to be able to look up NYC property information about a home's record on h
 
 
 ## Description
-The homepage of the app has a search bar that lets you search a property by an address or a zip code. At the top, the navbar has a login button on the right and a clickable Housing Data link that allows the user to return to the homepage at any moment of the time. A user is free to search without logging in, but won't be able to save or get much details without haveing a profile. On the logging page the user either can signup to create an account or simply signin if he/she already has an account. Once the user is signed in, he/she can access the profile associated with that account. The profile will contatin any saved property. The user can always add new properties to his/her profile, delete exisiting one(s) or can click on the link(s) to check the details, or even leave using the logout button on the right.
+The homepage of the app has a search bar that lets you search a property by an address or a zip code. At the top, the navbar has a login button on the right and a clickable Housing Data link on the left, which allows the user to return to the homepage at any moment of the time. A user is free to search without logging in, but won't be able to save or get much details without haveing a profile. On the logging page the user either can signup to create an account or simply signin if he/she already has an account. Once the user is signed in, he/she can access the profile associated with that account. The profile will contatin any previously saved property. The user can always add new properties to his/her profile, delete exisiting one(s) / can click on the link(s) to check the details, or even leave using the logout button on the right side.
 
-If the user wants to search new properties, he/she can navigate to the homepage, using the Housing Data Link. If the user searches by a zip, 10 searche results will appear. Note same address can appear more than once due to having multiple violations or different violation descriptions within the sane violation. Other than the address and violation status, user can't see further detials until he/she saves the property. Once the user saves a property it will be added to his/her profile, and the address will appear as a clickable link. The violation status and violation description are also available with each address, and by clicking on each link the user has the ability to check futher property details. 
+If the user wants to search new properties, he/she can navigate to the homepage, using the Housing Data Link. If the user searches by a zip, 10 search results will appear on the page. Note same address can appear more than once due to having multiple violations or different violation descriptions within the same violation. Other than the address and violation status, user can't see further detials until he/she saves the property. Once the user saves a property it will be added to his/her profile, and the address will appear as a clickable link. The violation status and violation description are also available with each address, and by clicking on each link the user has the ability to check futher property details. 
 
-Simialry a user can search a property by an address but it will directly take him/her to the property details page. To save the property on the profile, he/she has to click save button at the bottom. Once saved, the user can find the property on his/her profile with other saved properties. 
+Simialry a user can search a property by an address but it will directly take him/her to the property details page. To save the property on the profile, he/she has to click the save button at the bottom. Once saved, the user can find the property on his/her profile with other saved properties. 
 
 
-## Installations & Usage
+## Installation
 
 Given you already have Node.js and MySQL Workbench installed on your computer, clone the repository on your local machine. On your local repository, create a .env file that contains 
 
@@ -58,6 +59,9 @@ Then open the terminal and naviagte to your local repo. Run this command to inst
 ```
 npm i 
 ```
+
+## Usage
+
 Next open MySQL Workbench and run these lines of code 
 ```
 DROP DATABASE IF EXISTS property_violationDB;
@@ -133,7 +137,7 @@ and various folders that contain
   - zip.handlebars
 
 
-### Technologies Used
+## Technologies Used
 
 - Bootstrap 
 - Sequelize 
